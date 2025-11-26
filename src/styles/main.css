@@ -1,0 +1,7 @@
+/* src/styles/main.css */
+
+/* Importa toda la magia de Tailwind v4 */
+@import "tailwindcss";
+
+/* Aquí más adelante podemos añadir utilidades personalizadas, variantes, etc. */
+/* Por ahora lo dejamos limpio. */

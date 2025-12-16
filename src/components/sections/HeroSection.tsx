@@ -1,62 +1,81 @@
-// src/components/sections/HeroSection.tsx
 import type { FC } from 'react'
+import { motion } from 'framer-motion'
+import isotipo from '../../assets/logos/5. Isotipo_Samanda.png'
 
 export const HeroSection: FC = () => {
   return (
-    <section
-      id="hero"
-      className="relative flex flex-col gap-8 overflow-hidden py-12 sm:py-20"
-    >
-      {/* Orbes decorativos */}
-      <div className="pointer-events-none absolute -left-40 top-0 h-64 w-64 rounded-full bg-emerald-500/20 blur-3xl" />
-      <div className="pointer-events-none absolute -right-40 bottom-0 h-64 w-64 rounded-full bg-fuchsia-500/20 blur-3xl" />
+    <section id="hero" className="space-y-12 sm:space-y-14 md:space-y-16">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+        className="relative overflow-hidden rounded-3xl border bg-linear-to-br from-red-950/25 via-red-900/10 to-black/8 p-8 sm:p-10 md:p-12 shadow-sm border-red-900/30 transition duration-200 hover:shadow-md hover:border-(--sam-red)"
+      >
+        <div className="relative z-10">
+          <motion.p
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-xs font-semibold uppercase tracking-[0.32em] text-black/60"
+          >
+            Sello discográfico
+          </motion.p>
 
-      <div className="relative flex flex-col gap-8 sm:flex-row sm:items-center">
-        <div className="flex-1 space-y-6">
-          <p className="text-xs font-medium uppercase tracking-[0.25em] text-emerald-400">
-            Sello discográfico independiente
-          </p>
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            SamandaRecord, sonido contemporáneo con esencia propia.
-          </h1>
-          <p className="max-w-xl text-sm text-slate-300">
-            Este es el espacio digital de SamandaRecord. Aquí vivirá la historia,
-            los lanzamientos y el talento de los artistas que forman parte del
-            sello. Por ahora trabajamos con contenido de ejemplo para definir la
-            estructura y la experiencia del sitio.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <a
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="mt-5 font-(--font-display) text-4xl leading-tight tracking-tight text-black sm:text-5xl md:text-6xl"
+          >
+            Un sello que se escucha,
+            <span className="block text-(--sam-red)">una huella que perdura.</span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="mt-6 max-w-2xl text-sm leading-relaxed text-black/70 sm:text-base"
+          >
+            En Samanda Records creemos que la música es más que un sonido: es una
+            huella que trasciende fronteras. Cada artista, cada nota, cada beat es
+            parte de una historia que queremos compartir con el mundo.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="mt-8 flex flex-wrap gap-4"
+          >
+            <motion.a
               href="#artists"
-              className="rounded-full bg-emerald-500 px-6 py-2 text-xs font-semibold text-slate-950 transition-transform duration-200 hover:-translate-y-0.5 hover:bg-emerald-400"
+              whileHover={{ scale: 1.05, boxShadow: '0 20px 25px rgba(155, 0, 0, 0.2)' }}
+              whileTap={{ scale: 0.95 }}
+              className="rounded-full bg-(--sam-red) px-7 py-3 text-xs font-semibold text-white transition duration-200 hover:opacity-90 hover:shadow-lg active:scale-95"
             >
               Ver artistas
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="#tracks"
-              className="rounded-full border border-slate-700 px-6 py-2 text-xs font-semibold text-slate-100 transition-colors duration-200 hover:border-emerald-500 hover:text-emerald-400"
+              whileHover={{ scale: 1.05, backgroundColor: 'rgba(0, 0, 0, 0.05)' }}
+              whileTap={{ scale: 0.95 }}
+              className="rounded-full border border-black/20 px-7 py-3 text-xs font-semibold text-black/80 transition duration-200 hover:border-black/40 hover:bg-black/2 hover:text-black active:scale-95"
             >
-              Escuchar catálogo
-            </a>
-          </div>
+              Explorar catálogo
+            </motion.a>
+          </motion.div>
         </div>
 
-        <div className="relative mt-6 flex flex-1 justify-center sm:mt-0">
-          <div className="h-48 w-64 rounded-3xl border border-slate-800 bg-slate-900/60 p-4 shadow-xl shadow-emerald-500/10">
-            <div className="mb-3 flex items-center justify-between text-xs text-slate-400">
-              <span>Panel del sello</span>
-              <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] text-emerald-400">
-                Demo
-              </span>
-            </div>
-            <div className="space-y-2 text-xs text-slate-200">
-              <p>Artistas activos: 3</p>
-              <p>Próximos lanzamientos: 4</p>
-              <p>Catálogo inicial en construcción.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+        <motion.img
+          src={isotipo}
+          alt="Samanda Records Isotipo"
+          initial={{ opacity: 0, scale: 0.8, rotate: -20 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="absolute -bottom-12 -right-12 w-96 h-96"
+        />
+      </motion.div>
     </section>
   )
 }

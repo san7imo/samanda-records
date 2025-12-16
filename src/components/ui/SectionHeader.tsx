@@ -1,4 +1,3 @@
-// src/components/ui/SectionHeader.tsx
 import type { FC, ReactNode } from 'react'
 
 type SectionHeaderProps = {
@@ -21,17 +20,21 @@ export const SectionHeader: FC<SectionHeaderProps> = ({
   align = 'left',
 }) => {
   return (
-    <header className={`flex flex-col gap-3 ${alignmentClasses[align]}`}>
+    <header className={`flex flex-col gap-4 ${alignmentClasses[align]}`}>
       {eyebrow ? (
-        <p className="text-xs font-medium uppercase tracking-[0.2em] text-emerald-400">
+        <p className="text-xs font-bold uppercase tracking-[0.32em] text-(--sam-red)">
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+
+      <h2 className="font-(--font-display) text-3xl sm:text-4xl tracking-tight text-black leading-tight">
         {title}
       </h2>
+
       {description ? (
-        <p className="max-w-2xl text-sm text-slate-300">{description}</p>
+        <p className="max-w-2xl text-base leading-relaxed text-black/70">
+          {description}
+        </p>
       ) : null}
     </header>
   )

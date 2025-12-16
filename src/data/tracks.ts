@@ -5,6 +5,7 @@ export type Track = {
   artistName: string
   year: number
   duration: string
+  coverImage?: string
 }
 
 export const TRACKS: Track[] = [

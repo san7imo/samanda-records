@@ -33,7 +33,7 @@ export const TracksSection: FC = () => {
         transition={{ duration: 0.6 }}
       >
         <SectionHeader
-          eyebrow="Canciones"
+          eyebrow="Discografía"
           title="Catálogo de música de Samanda Records."
           description="Explora nuestro catálogo completo de lanzamientos. Cada canción representa el compromiso de nuestro sello con la calidad artística y la innovación sonora."
         />

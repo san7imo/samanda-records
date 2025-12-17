@@ -8,7 +8,9 @@ const NAV_ITEMS = [
   { label: 'Inicio', href: '/', isExternal: false },
   { label: 'Quiénes somos', href: '/#about', isExternal: false },
   { label: 'Artistas', href: '/#artists', isExternal: false },
-  { label: 'Canciones', href: '/#tracks', isExternal: false },
+  { label: 'Discografía', href: '/#tracks', isExternal: false },
+  { label: 'Lanzamientos', href: '/#releases', isExternal: false },
+  { label: 'Eventos', href: '/#events', isExternal: false },
   { label: 'El alma', href: '/soul', isExternal: false },
   { label: 'Contáctanos', href: '/#contact', isExternal: false },
 ] as const

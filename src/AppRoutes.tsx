@@ -5,6 +5,8 @@ import { HeroSection } from './components/sections/HeroSection'
 import { AboutSection } from './components/sections/AboutSection'
 import { ArtistsSection } from './components/sections/ArtistsSection'
 import { TracksSection } from './components/sections/TracksSection'
+import { ReleasesSection } from './components/sections/ReleasesSection'
+import { EventsSection } from './components/sections/EventsSection'
 import { GallerySection } from './components/sections/GallerySection'
 import { ContactSection } from './components/sections/ContactSection'
 import { ArtistPage } from './pages/ArtistPage'
@@ -17,6 +19,8 @@ const HomePage: FC = () => (
     <AboutSection />
     <ArtistsSection />
     <TracksSection />
+    <EventsSection />
+    <ReleasesSection />
     <GallerySection />
     <ContactSection />
   </Layout>

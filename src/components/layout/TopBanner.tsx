@@ -5,12 +5,14 @@ import bannerYoutube from '../../assets/banners/Banner_Youtube.png'
 import banner3 from '../../assets/banners/Samanda_3.png'
 import banner4 from '../../assets/banners/Samanda_4.png'
 import banner5 from '../../assets/banners/Samanda_5.png'
+import banner6 from '../../assets/banners/samanda-banner.png'
 
 const BANNER_SLIDES = [
   { id: 1, src: bannerYoutube, alt: 'Samanda Records - Banner Principal' },
   { id: 2, src: banner3, alt: 'Samanda Records - Banner 3' },
   { id: 3, src: banner4, alt: 'Samanda Records - Banner 4' },
   { id: 4, src: banner5, alt: 'Samanda Records - Banner 5' },
+  { id: 5, src: banner6, alt: 'Samanda Records - Banner 6' },
 ]
 
 export const TopBanner: FC = () => {

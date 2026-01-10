@@ -11,9 +11,10 @@ import { GallerySection } from './components/sections/GallerySection'
 import { ContactSection } from './components/sections/ContactSection'
 import { ArtistPage } from './pages/ArtistPage'
 import { SoulPage } from './pages/SoulPage'
+import { ConstructionPage } from './pages/ConstructionPage'
 
-// Página de inicio
-const HomePage: FC = () => (
+// Página principal con el sitio actual
+const MainSitePage: FC = () => (
   <Layout>
     <HeroSection />
     <AboutSection />
@@ -44,7 +45,8 @@ const AppRoutes: FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<ConstructionPage />} />
+        <Route path="/construccion" element={<MainSitePage />} />
         <Route path="/artist/:id" element={<ArtistPageWrapper />} />
         <Route path="/soul" element={<SoulPageWrapper />} />
       </Routes>

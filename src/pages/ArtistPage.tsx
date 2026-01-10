@@ -38,7 +38,7 @@ export const ArtistPage: FC = () => {
         <h1 className="text-3xl font-bold">Artista no encontrado</h1>
         <p className="text-black/60">Lo sentimos, no pudimos encontrar este artista.</p>
         <Link
-          to="/"
+          to="/construccion"
           className="inline-block px-6 py-3 bg-(--sam-red) text-white rounded-lg font-semibold hover:opacity-90 transition"
         >
           Volver al inicio
@@ -83,13 +83,13 @@ export const ArtistPage: FC = () => {
 
               <div className="flex gap-3 flex-wrap">
                 <a
-                  href="/#contact"
+                  href="/construccion#contact"
                   className="inline-flex items-center px-6 py-3 bg-(--sam-red) text-white rounded-lg font-semibold hover:opacity-90 transition"
                 >
                   Colaborar
                 </a>
                 <a
-                  href="/"
+                  href="/construccion"
                   className="inline-flex items-center px-6 py-3 border border-black/20 text-black rounded-lg font-semibold hover:border-black/40 hover:bg-black/2 transition"
                 >
                   Volver
@@ -204,7 +204,7 @@ export const ArtistPage: FC = () => {
           oportunidades disponibles.
         </p>
         <a
-          href="/#contact"
+          href="/construccion#contact"
           className="inline-block px-8 py-4 bg-(--sam-red) rounded-lg font-semibold hover:opacity-90 transition duration-200"
         >
           Enviar propuesta

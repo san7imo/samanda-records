@@ -46,17 +46,8 @@ export const ConstructionPage: FC = () => {
           </h1>
           <p className="mx-auto max-w-2xl text-sm leading-relaxed text-red-200/70 sm:text-base">
             Muy pronto vas a encontrar una experiencia renovada, elegante y con la
-            fuerza de Samanda Records. Mientras tanto, puedes visitar el sitio actual.
+            fuerza de Samanda Records.
           </p>
-        </motion.div>
-
-        <motion.div variants={item} className="flex flex-wrap items-center justify-center gap-4">
-          <Link
-            to="/construccion"
-            className="rounded-full border border-red-800/70 px-7 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-red-200 transition hover:border-red-600 hover:text-red-100"
-          >
-            Entrar al sitio
-          </Link>
         </motion.div>
       </motion.div>
 

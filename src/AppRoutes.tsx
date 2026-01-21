@@ -1,5 +1,6 @@
 import type { FC } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { Layout } from './components/layout/Layout'
 import { HeroSection } from './components/sections/HeroSection'
 import { AboutSection } from './components/sections/AboutSection'
@@ -12,6 +13,16 @@ import { ContactSection } from './components/sections/ContactSection'
 import { ArtistPage } from './pages/ArtistPage'
 import { SoulPage } from './pages/SoulPage'
 import { ConstructionPage } from './pages/ConstructionPage'
+
+const ScrollToTop: FC = () => {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [pathname])
+
+  return null
+}
 
 // Página principal con el sitio actual
 const MainSitePage: FC = () => (
@@ -44,6 +55,7 @@ const SoulPageWrapper: FC = () => (
 const AppRoutes: FC = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<ConstructionPage />} />
         <Route path="/construccion" element={<MainSitePage />} />

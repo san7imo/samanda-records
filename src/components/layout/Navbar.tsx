@@ -21,6 +21,13 @@ export const Navbar: FC = () => {
   const navigate = useNavigate()
 
   const items = useMemo(() => NAV_ITEMS, [])
+  const isSoulItem = (href: string) => href === '/soul'
+  const getDesktopTextClass = (href: string) =>
+    isSoulItem(href) ? 'text-(--sam-red) hover:text-black/70' : 'hover:text-(--sam-red)'
+  const getMobileTextClass = (href: string) =>
+    isSoulItem(href)
+      ? 'text-(--sam-red) hover:text-black/80'
+      : 'text-black/80 hover:text-(--sam-red)'
 
   const handleNavClick = (href: string) => {
     setOpen(false)
@@ -71,7 +78,9 @@ export const Navbar: FC = () => {
                   onClick={() => {
                     handleNavClick(item.href)
                   }}
-                  className="transition-colors duration-200 hover:text-(--sam-red) cursor-pointer bg-transparent border-none"
+                  className={`transition-colors duration-200 cursor-pointer bg-transparent border-none ${getDesktopTextClass(
+                    item.href
+                  )}`}
                 >
                   {item.label}
                 </button>
@@ -79,7 +88,7 @@ export const Navbar: FC = () => {
                 <Link
                   to={item.href}
                   onClick={() => setOpen(false)}
-                  className="transition-colors duration-200 hover:text-(--sam-red)"
+                  className={`transition-colors duration-200 ${getDesktopTextClass(item.href)}`}
                 >
                   {item.label}
                 </Link>
@@ -114,14 +123,18 @@ export const Navbar: FC = () => {
                     onClick={() => {
                       handleNavClick(item.href)
                     }}
-                    className="block w-full text-left rounded-lg px-4 py-2.5 text-sm font-semibold text-black/80 transition-colors duration-200 hover:bg-black/10 hover:text-(--sam-red) bg-transparent border-none"
+                    className={`block w-full text-left rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors duration-200 hover:bg-black/10 bg-transparent border-none ${getMobileTextClass(
+                      item.href
+                    )}`}
                   >
                     {item.label}
                   </button>
                 ) : (
                   <Link
                     to={item.href}
-                    className="block rounded-lg px-4 py-2.5 text-sm font-semibold text-black/80 transition-colors duration-200 hover:bg-black/10 hover:text-(--sam-red)"
+                    className={`block rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors duration-200 hover:bg-black/10 ${getMobileTextClass(
+                      item.href
+                    )}`}
                     onClick={() => setOpen(false)}
                   >
                     {item.label}

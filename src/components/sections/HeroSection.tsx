@@ -73,7 +73,7 @@ export const HeroSection: FC = () => {
           initial={{ opacity: 0, scale: 0.8, rotate: -20 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="absolute -bottom-12 -right-12 w-96 h-96"
+          className="absolute -bottom-12 opacity-85 -right-12 w-96 h-96"
         />
       </motion.div>
     </section>

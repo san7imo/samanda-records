@@ -35,8 +35,13 @@ export const EventsSection: FC = () => {
       >
         <SectionHeader
           eyebrow="Eventos & Shows"
-          title="Vive la música en vivo."
-          description="Acompáñanos a nuestros próximos eventos y shows. Disfruta en directo la música de Samanda Records y conecta con nuestra comunidad."
+          title="Escucha lo que no se edita"
+          description={
+            <>
+              Conoce nuestros próximos eventos y shows en vivo.<br />
+              ¡Aparta tus entradas antes de que se agoten!
+            </>
+          }
         />
       </motion.div>
 

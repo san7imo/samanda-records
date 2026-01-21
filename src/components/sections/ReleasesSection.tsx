@@ -71,7 +71,12 @@ export const ReleasesSection: FC = () => {
         <SectionHeader
           eyebrow="Próximos Lanzamientos"
           title="Música fresca en camino."
-          description="Descubre los próximos álbumes, EPs y singles que Samanda Records tiene preparado para ti. Mantente atento a nuestros estrenos."
+          description={
+            <>
+              Conoce los próximos álbumes, EPs y singles recién salidos del estudio.<br />
+              ¡Dale play antes que nadie más!
+            </>
+          }
         />
       </motion.div>
 
